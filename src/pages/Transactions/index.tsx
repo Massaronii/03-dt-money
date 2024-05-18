@@ -1,5 +1,6 @@
 import { Header } from "../../components/Header"
 import { Summary } from "../../components/Summary"
+import { SearchForm } from "./components/SearchForm"
 import { PriceHighLight, TransactionsContainer, TransactionsTable } from "./styles"
 
 export function Transactions() {
@@ -9,6 +10,7 @@ export function Transactions() {
       <Summary />
 
       <TransactionsContainer>
+        <SearchForm/>
         <TransactionsTable>
           <tbody>
             <tr>
@@ -22,9 +24,7 @@ export function Transactions() {
             <tr>
               <td width="50%">Hamburguer</td>
               <td>
-                <PriceHighLight variant="outcome">
-                  - R$ 12,00
-                  </PriceHighLight>
+                <PriceHighLight variant="outcome">- R$ 12,00</PriceHighLight>
               </td>
               <td>Alimentação</td>
               <td>10/04/2022</td>
