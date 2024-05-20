@@ -1,20 +1,28 @@
 {
   "transactions": [
     {
-    "id": 1,
-    "description": "Desenvolvimento de site",
-    "type": "income",
-    "category": "Venda",
-    "price": 14000,
-    "createdAt": "2022-07-29T19:36:44.505Z"
+      "id": "1",
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2022-07-29T19:36:44.505Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "description": "Hamburger",
       "type": "outcome",
       "category": "Alimentação",
       "price": 50,
       "createdAt": "2022-07-29T19:40:44.505Z"
+    },
+    {
+      "id": "34f5",
+      "description": "estou com problema na limpeza do produto, queria saber o modo ideal de limpar ele e com quais produtos ",
+      "price": 1213,
+      "category": "venda",
+      "type": "income",
+      "createdAt": "2024-05-20T23:42:25.389Z"
     }
   ]
 }
