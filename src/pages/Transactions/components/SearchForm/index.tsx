@@ -1,15 +1,33 @@
 import { MagnifyingGlass } from "phosphor-react";
 import { SearchFormContainer } from "./styles";
+import * as z from "zod"
+
+
+const searchFormSchema = z.object({
+  query: z.string()
+})
+
+type SearchFormInputs = z.infer<typeof searchFormSchema>
 
 export function SearchForm(){
-  return (
-  <SearchFormContainer>
-    <input type="text" placeholder="busque por transações" />
+  const { register, handleSubmit } = useForm<SearchFormInputs>()
 
-    <button type="submit">
-      <MagnifyingGlass size={20}/>
-      Buscar
-    </button>
-  </SearchFormContainer>
+  function handleSearchTransactions() {
+
+  }
+
+  return (
+    <SearchFormContainer onSubmit={handleSubmit(handleSearchTransactions)}>
+      <input
+        type="text"
+        placeholder="busque por transações"
+        {...register("query")}
+      />
+
+      <button type="submit">
+        <MagnifyingGlass size={20} />
+        Buscar
+      </button>
+    </SearchFormContainer>
   )
 }
